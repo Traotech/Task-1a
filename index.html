@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Todo Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<article class="todo-card" data-testid="test-todo-card">
+
+  <div class="priority-indicator" data-testid="test-todo-priority-indicator"></div>
+
+  <!-- VIEW MODE -->
+  <div id="view-mode">
+
+    <input type="checkbox" id="complete-toggle" data-testid="test-todo-complete-toggle">
+
+    <h3 data-testid="test-todo-title" id="title">Build Stage 1 Task</h3>
+
+    <p data-testid="test-todo-description" id="description">
+      This is a long description that demonstrates expand and collapse behavior for the task. It should hide part of the content initially and expand when needed.
+    </p>
+
+    <button data-testid="test-todo-expand-toggle" id="expand-btn"
+      aria-expanded="false" aria-controls="collapsible">
+      Expand
+    </button>
+
+    <div id="collapsible" data-testid="test-todo-collapsible-section"></div>
+
+    <span data-testid="test-todo-priority" id="priority">High</span>
+
+    <span data-testid="test-todo-status" id="status">Pending</span>
+
+    <select data-testid="test-todo-status-control" id="status-control">
+      <option>Pending</option>
+      <option>In Progress</option>
+      <option>Done</option>
+    </select>
+
+    <time data-testid="test-todo-due-date" id="due-date"></time>
+    <time data-testid="test-todo-time-remaining" id="time-remaining" aria-live="polite"></time>
+
+    <span data-testid="test-todo-overdue-indicator" id="overdue"></span>
+
+    <div data-testid="test-todo-tags">
+      <span>work</span>
+      <span>urgent</span>
+    </div>
+
+    <button data-testid="test-todo-edit-button" id="edit-btn">Edit</button>
+    <button data-testid="test-todo-delete-button">Delete</button>
+
+  </div>
+
+  <!-- EDIT MODE -->
+  <form id="edit-form" data-testid="test-todo-edit-form" class="hidden">
+
+    <label>Title</label>
+    <input data-testid="test-todo-edit-title-input" id="edit-title">
+
+    <label>Description</label>
+    <textarea data-testid="test-todo-edit-description-input" id="edit-desc"></textarea>
+
+    <label>Priority</label>
+    <select data-testid="test-todo-edit-priority-select" id="edit-priority">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+
+    <label>Due Date</label>
+    <input type="datetime-local" data-testid="test-todo-edit-due-date-input" id="edit-date">
+
+    <button type="button" data-testid="test-todo-save-button" id="save-btn">Save</button>
+    <button type="button" data-testid="test-todo-cancel-button" id="cancel-btn">Cancel</button>
+
+  </form>
+
+</article>
+
+<script src="script.js"></script>
+</body>
+</html>

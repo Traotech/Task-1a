@@ -1,0 +1,52 @@
+body {
+  font-family: Arial;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.todo-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.priority-indicator {
+  height: 5px;
+  border-radius: 5px;
+}
+
+.high { background: red; }
+.medium { background: orange; }
+.low { background: green; }
+
+.completed h3 {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.overdue {
+  color: red;
+  font-weight: bold;
+}
+
+button {
+  padding: 8px;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .todo-card {
+    width: 100%;
+  }
+}
