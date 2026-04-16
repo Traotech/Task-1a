@@ -38,8 +38,6 @@ This project is an advanced Todo Card component built as part of my HNG Internsh
 
 
 
-##  How to Run Locally
+##  Live Demo
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Traotech/HNG-to-do
+(fascinating-froyo-e9a5cb.netlify.app)
